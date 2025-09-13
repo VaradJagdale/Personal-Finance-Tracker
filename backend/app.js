@@ -9,22 +9,18 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
 app.use(cors({
   origin: process.env.FRONTEND_URL,
   methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 app.use(express.json());
 
-// Routes
 app.use('/api/transactions', transactionRoutes);
 
-// Test route
 app.get('/', (req, res) => {
   res.send('Personal Finance Tracker API is running');
 });
 
-// Connect to MongoDB
 connectDB();
 
 app.use(errorHandler);

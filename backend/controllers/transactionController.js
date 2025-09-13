@@ -1,8 +1,5 @@
 import Transaction from '../models/Transaction.js';
 
-// @desc    Get all transactions
-// @route   GET /api/transactions
-// @access  Public
 export const getTransactions = async (req, res, next) => {
   try {
     const transactions = await Transaction.find().sort({ date: -1 });
@@ -12,9 +9,6 @@ export const getTransactions = async (req, res, next) => {
   }
 };
 
-// @desc    Get a single transaction by ID
-// @route   GET /api/transactions/:id
-// @access  Public
 export const getTransactionById = async (req, res, next) => {
   try {
     const transaction = await Transaction.findById(req.params.id);
@@ -29,9 +23,6 @@ export const getTransactionById = async (req, res, next) => {
   }
 };
 
-// @desc    Create a new transaction
-// @route   POST /api/transactions
-// @access  Public
 export const createTransaction = async (req, res, next) => {
   try {
     const { title, amount, date, category } = req.body;
@@ -49,9 +40,6 @@ export const createTransaction = async (req, res, next) => {
   }
 };
 
-// @desc    Update a transaction
-// @route   PUT /api/transactions/:id
-// @access  Public
 export const updateTransaction = async (req, res, next) => {
   try {
     const transaction = await Transaction.findByIdAndUpdate(
@@ -72,9 +60,6 @@ export const updateTransaction = async (req, res, next) => {
   }
 };
 
-// @desc    Delete a transaction
-// @route   DELETE /api/transactions/:id
-// @access  Public
 export const deleteTransaction = async (req, res, next) => {
   try {
     const transaction = await Transaction.findByIdAndDelete(req.params.id);

@@ -18,11 +18,11 @@ const transactionSchema = new mongoose.Schema({
   category: {
     type: String,
     required: [true, 'Please add a category'],
-    enum: ['Income', 'Expense', 'Other'], // You can modify categories as needed
+    enum: ['Income', 'Expense', 'Other'],
     default: 'Other'
   }
 }, {
-  timestamps: true  // Automatically adds createdAt and updatedAt fields
+  timestamps: true
 });
 
 const Transaction = mongoose.model('Transaction', transactionSchema);

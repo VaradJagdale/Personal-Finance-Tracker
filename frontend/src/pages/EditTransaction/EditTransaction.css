@@ -4,7 +4,7 @@
   padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .edit-transaction-container h1 {
@@ -28,7 +28,8 @@
 
 .transaction-form button {
   padding: 10px;
-  background-color: #28a745; /* Green for update */
+  background-color: #28a745;
+  /* Green for update */
   color: white;
   border: none;
   border-radius: 4px;
