@@ -1,0 +1,37 @@
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.transaction-item h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.transaction-actions a,
+.transaction-actions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.transaction-actions a {
+  background-color: #ffc107;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.transaction-actions button {
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 4px;
+}
