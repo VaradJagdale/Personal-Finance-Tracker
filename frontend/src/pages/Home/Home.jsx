@@ -24,25 +24,32 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h1>Personal Finance Tracker</h1>
-      <Link to="/add" className="add-button">Add New Transaction</Link>
+      <h1 className="home-title">Personal Finance Tracker</h1>
 
-      <ul className="transaction-list">
-        {transactions.map(tx => (
-          <li key={tx._id} className="transaction-item">
-            <div className="transaction-details">
-              <h2>{tx.title}</h2>
-              <p>Amount: {tx.amount}</p>
-              <p>Category: {tx.category}</p>
-              <p>Date: {new Date(tx.date).toLocaleDateString()}</p>
-            </div>
-            <div className="transaction-actions">
-              <Link to={`/${tx._id}/edit`}>Edit</Link>
-              <button onClick={() => handleDelete(tx._id)}>Delete</button>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div className="button-wrapper">
+        <Link to="/add" className="add-button">Add New Transaction</Link>
+      </div>
+
+      {transactions.length === 0 ? (
+        <p className="no-transactions">No transactions yet.</p>
+      ) : (
+        <ul className="transaction-list">
+          {transactions.map(tx => (
+            <li key={tx._id} className="transaction-item">
+              <div className="transaction-details">
+                <h2>{tx.title}</h2>
+                <p><strong>Amount:</strong> ${tx.amount.toFixed(2)}</p>
+                <p><strong>Category:</strong> {tx.category || "Uncategorized"}</p>
+                <p><strong>Date:</strong> {new Date(tx.date).toLocaleDateString()}</p>
+              </div>
+              <div className="transaction-actions">
+                <Link to={`/${tx._id}/edit`} className="edit-btn">Edit</Link>
+                <button onClick={() => handleDelete(tx._id)} className="delete-btn">Delete</button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

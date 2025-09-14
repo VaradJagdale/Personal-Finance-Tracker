@@ -26,14 +26,15 @@ const EditTransaction = () => {
 
   return (
     <div className="edit-transaction-container">
-      <h1>Edit Transaction</h1>
+      <h1 className="form-title">Edit Transaction</h1>
       {initialData ? (
         <TransactionForm initialData={initialData} onSubmit={handleSubmit} />
       ) : (
-        <p>Loading...</p>
+        <p className="loading-text">Loading...</p>
       )}
     </div>
   );
+
 };
 
 export default EditTransaction;

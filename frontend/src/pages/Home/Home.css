@@ -1,92 +1,135 @@
 .home-container {
   max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  padding: 30px 25px;
+  background: linear-gradient(135deg, #ffffff, #f0f7fa);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.home-container h1 {
+.home-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.home-title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 2rem;
+  font-weight: 600;
   color: #333;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .add-button {
   display: inline-block;
-  margin-bottom: 20px;
-  padding: 10px 15px;
-  background-color: #007bff;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #007bff, #4dabf7);
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
 }
 
 .add-button:hover {
-  background-color: #0056b3;
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #0056b3, #339af0);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.no-transactions {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 20px;
 }
 
 .transaction-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .transaction-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  transition: background-color 0.2s;
+  padding: 18px 22px;
+  margin-bottom: 15px;
+  background: linear-gradient(145deg, #ffffff, #e8f5ff);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 .transaction-item:hover {
-  background-color: #f9f9f9;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .transaction-details h2 {
-  margin: 0 0 5px 0;
-  font-size: 1.2rem;
-  color: #333;
+  margin: 0 0 6px 0;
+  font-size: 1.3rem;
+  color: #222;
 }
 
 .transaction-details p {
-  margin: 2px 0;
+  margin: 4px 0;
   color: #555;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
-.transaction-actions a,
-.transaction-actions button {
-  margin-left: 10px;
-  padding: 5px 10px;
+.transaction-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background: linear-gradient(90deg, #ffc107, #ffd54f);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
   text-decoration: none;
-  border: none;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover {
+  background: linear-gradient(90deg, #e0a800, #ffca28);
+}
+
+.delete-btn {
+  background: linear-gradient(90deg, #dc3545, #ff6b6b);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
   cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.85rem;
+  transition: all 0.2s;
 }
 
-.transaction-actions a {
-  background-color: #ffc107;
-  color: #fff;
+.delete-btn:hover {
+  background: linear-gradient(90deg, #c82333, #ff4d4d);
 }
 
-.transaction-actions a:hover {
-  background-color: #e0a800;
-}
+@media (max-width: 600px) {
+  .home-container {
+    width: 250px;
+  }
 
-.transaction-actions button {
-  background-color: #dc3545;
-  color: #fff;
-}
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.transaction-actions button:hover {
-  background-color: #c82333;
+  .transaction-actions {
+    margin-top: 12px;
+  }
 }

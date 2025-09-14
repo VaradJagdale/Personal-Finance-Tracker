@@ -15,10 +15,11 @@ const AddTransaction = () => {
 
   return (
     <div className="add-transaction-container">
-      <h1>Add New Transaction</h1>
+      <h1 className="form-title">Add New Transaction</h1>
       <TransactionForm onSubmit={handleSubmit} />
     </div>
   );
+
 };
 
 export default AddTransaction;

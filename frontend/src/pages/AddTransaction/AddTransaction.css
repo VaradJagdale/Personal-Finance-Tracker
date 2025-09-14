@@ -1,15 +1,24 @@
 .add-transaction-container {
   max-width: 500px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  padding: 30px 25px;
+  background: linear-gradient(135deg, #ffffff, #e0f7fa);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.add-transaction-container h1 {
+.add-transaction-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.form-title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .transaction-form {
@@ -19,23 +28,51 @@
 
 .transaction-form input,
 .transaction-form select {
-  padding: 10px;
+  padding: 12px 15px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
 }
 
 .transaction-form button {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
+  padding: 12px 15px;
+  background: linear-gradient(90deg, #007bff, #4dabf7);
+  color: #fff;
+  font-weight: 600;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1em;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 .transaction-form button:hover {
-  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(90deg, #0056b3, #339af0);
+}
+
+@media (max-width: 480px) {
+  .add-transaction-container {
+    padding: 20px;
+    margin: 30px 15px;
+  }
+
+  .form-title {
+    font-size: 1.6rem;
+  }
+
+  .transaction-form input,
+  .transaction-form select,
+  .transaction-form button {
+    font-size: 0.95rem;
+  }
 }

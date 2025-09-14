@@ -3,6 +3,7 @@ import Home from './pages/Home/Home';
 import AddTransaction from './pages/AddTransaction/AddTransaction';
 import EditTransaction from './pages/EditTransaction/EditTransaction';
 import DeleteTransaction from './pages/DeleteTransaction';
+import './App.css';
 
 function App() {
   return (
