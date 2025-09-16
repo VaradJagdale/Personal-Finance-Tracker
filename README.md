@@ -36,3 +36,22 @@ The Personal Finance Tracker allows users to:
 1. Clone the repository:
    ```bash
    git clone https://github.com/VaradJagdale/Personal-Finance-Tracker.git
+
+## Navigate to frontend and backend folders and install dependencies:
+
+cd backend
+npm install
+
+cd ../frontend
+npm install
+
+## Set up your .env file in the backend with necessary environment variables (like MongoDB URI).
+
+## Start the project:
+
+Backend:
+npm run start
+
+Frontend:
+npm run dev
+
