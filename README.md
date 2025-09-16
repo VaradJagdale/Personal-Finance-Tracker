@@ -56,7 +56,7 @@ PORT=5000
 ## Start the project:
 
 Backend:
-npm run start
+npm run dev
 
 Frontend:
 npm run dev
