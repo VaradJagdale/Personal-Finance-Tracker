@@ -38,7 +38,7 @@ The Personal Finance Tracker allows users to:
    git clone https://github.com/VaradJagdale/Personal-Finance-Tracker.git
 
 ## Navigate to frontend and backend folders and install dependencies:
-
+```bash
 cd backend
 
 npm install
@@ -46,6 +46,7 @@ npm install
 cd ../frontend
 
 npm install
+```
 
 ## Set up your .env file in the backend/ folder with necessary environment variables, for example:
 
