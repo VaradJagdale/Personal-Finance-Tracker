@@ -49,16 +49,21 @@ npm install
 ```
 
 ## Set up your .env file in the backend/ folder with necessary environment variables, for example:
-
+```env
 MONGODB_URI=your_mongodb_connection_string
 
 PORT=5000
+```
 
 ## Start the project:
 
 Backend:
+```bash
 npm run dev
+```
 
 Frontend:
+```bash
 npm run dev
+```
 
